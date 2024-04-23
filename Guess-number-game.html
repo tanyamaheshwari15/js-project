@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Game</title>
+    <script>
+        var msg="";
+        var ans=5;
+        var cnt=1;
+        var flag=false;
+        do{
+            var input1=prompt("Guess the number btw 1 to 10");
+
+            input1=parseInt(input1);
+
+            if(input1!=ans)
+            alert("Nope-Wrong!");
+            else{
+            flag=true;
+            break;}
+            
+            if(cnt==3)
+            break;
+
+            cnt++;
+        }while(ans!=input1);
+        
+        if(flag){
+        msg+="You guessed it right!"+"<br>"+ans+" is the answer.";}
+        else{
+            msg+="Sorry better try Again";  
+        }
+    </script>
+</head>
+<body>
+    <h1>GUESS THE NUMBER GAME</h1>
+    <script>
+        document.write(msg);
+    </script>
+</body>
+</html>

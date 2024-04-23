@@ -1,0 +1,33 @@
+<html>
+	<head><title>sum</title>
+	</head>
+      <style>
+            body{
+                  font-size: larger;
+            }
+            .btn{
+                  background: cadetblue;
+                  border-radius: 5px;
+                  border: 2px crimson;
+                  width: 90px;
+                  height: 30px;
+                  text-align: center;
+                  cursor: pointer;
+            } 
+      </style>
+	<body>
+      <h1>Addition of two numbers</h1>
+       <p>First number:<input id="n1"></p>
+       <p>Second number:<input id="n2"></p>
+       <div class="btn" onclick="myFunction()">Calcutate</div>
+       <p id="sum"></p>
+       <script>
+            function myFunction() {
+                  var n1= document.getElementById("n1").value;
+                  var n2= document.getElementById("n2").value;
+                  var sum=parseInt(n1)+parseInt(n2);
+              document.write("Sum of two numbers: ",sum);
+            }
+            </script>
+	</body>
+</html>

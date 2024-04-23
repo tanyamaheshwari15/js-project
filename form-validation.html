@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <script>
+         function checkformdata(){
+            var msg="";
+            
+            var fname=document.getElementById("name").value;
+            var mail=document.getElementById("email").value;
+            var user_age=document.getElementById("age").value;
+
+            var radio1=document.getElementById("radio1").checked;
+            var radio2=document.getElementById("radio2").checked;
+
+            var checkbox=document.getElementById("chkbox").checked;
+
+            msg+="Name:"+fname+"<br>";
+            msg+="Email:"+mail+"<br>";
+            msg+="Age:"+user_age+"<br>";
+
+            msg+="Male:"+radio1+"<br>";
+            msg+="Female:"+radio2+"<br>";
+
+            msg+="Terms:"+checkbox+"<br>";
+
+            document.getElementById("tmsg").innerHTML=msg;
+         }
+    </script>
+</head>
+<body>
+    <p id="tmsg"></p>
+    <h1>Form Validation</h1>
+    <form method="get">
+        Your Name:
+        <input type="text" id="name" name="fname"><br><br>
+        Your Email:
+        <input type="text" id="email" name="mail"><br><br>
+        Your Age:
+        <input type="Number" id="age" name="user_age"><br><br>
+        Male <input type="radio" name="radio" id="radio1">
+        Female <input type="radio" name="radio" id="radio2"><br><br>
+        <input type="checkbox" id="chkbox" name="checkbox">Agree to our terms<br><br>
+        <input type="button" name="Submit" value="submit" onclick="checkformdata();">
+    </form>
+</body>
+</html>
